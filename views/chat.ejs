@@ -71,11 +71,16 @@
         });
 
         socket.on("message", (id, message) => {
-            let broadcast = document.createElement("p");
+            var broadcast = document.createElement("p");
             broadcast.style.textAlign = "right";
             broadcast.style.fontSize = "24px";
-            broadcast.textContent = message + id;
+            broadcast.textContent = message;
+            var id1 = document.createElement("p");
+            id1.style.textAlign = "right";
+            id1.style.fontSize = "24px";
+            id1.textContent = id;
             messageList.appendChild(broadcast);
+            messageList.appendChild(id1);
         });
     </script>
 </body>
